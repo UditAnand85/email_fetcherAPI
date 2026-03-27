@@ -293,8 +293,7 @@ def fetch_emails_to_df(USER, PASSWORD, IMAP_URL='imap.gmail.com', max_emails=500
     df.reset_index(drop=True, inplace=True)
     df = add_cleaned_body(df)
     df = classify_emails_df(df)
-    label_counts = df['label'].value_counts().to_dict()
-    return label_counts
+    return df
 
 
 
