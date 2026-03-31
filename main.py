@@ -26,3 +26,6 @@ def analyze_emails(user: UserInput):
         "status": "success",
         "data": result
     }
+@app.get("/health")
+def health():
+    return {"status": "alive"}
